@@ -123,6 +123,31 @@ md-docs-dark-theme a,a:hover,a:visited {
     width: 36px;
 }
 
+md-content.subscribeNewsletter {
+  background-color: rgb(69,90,100);
+  color: rgba(255,255,255,0.87);
+}
+
+.subscribeNewsletter md-input-container label {
+  color: #DDD;
+}
+
+.subscribeNewsletter md-input-container input {
+  border-color: #DDD;
+}
+
+.subscribeNewsletter md-input-container.md-input-focused label {
+  color: white;
+}
+
+.subscribeNewsletter md-input-container.md-input-focused input {
+  border-color: #DDD;
+}
+
+.subscribeNewsletter md-input-container.md-input-has-value label {
+  color: white;
+}
+
   </style>
 
 </head>
@@ -258,6 +283,29 @@ md-docs-dark-theme a,a:hover,a:visited {
     </div>
   </div>
 </section>
+<md-content class="subscribeNewsletter md-padding" style="text-align:center">
+  <!-- Begin MailChimp Signup Form -->
+  <center>
+<div id="mc_embed_signup">
+<form action="//startuppilots.us12.list-manage.com/subscribe/post?u=bec57b6339bfe0d6ca96c1c8d&amp;id=539f21672f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+  <h3> Subscribe to the Startup Pilots List </h3>
+  <md-input-container class="md-block" style="max-width:400px">
+    <label>Email Address</label>
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" required>
+  </md-input-container>
+
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bec57b6339bfe0d6ca96c1c8d_539f21672f" tabindex="-1" value=""></div>
+    <div class="clear"><md-button class="md-raised md-accent md-padding" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+    Subscribe
+    </md-button>
+    </div>
+    </div>
+    </form>
+    </div>
+    </center>
+</md-content>
 <section class="md-padding md-docs-dark-theme ng-scope">
   Copyright 2016 <a href="http://www.startuppilots.com">StartupPilots</a>. All rights reserved.
 </section></section>
