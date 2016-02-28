@@ -1,1 +1,287 @@
-Coming soon...
+<html>
+<head>
+  <title>AffiliateLink.Me</title>
+  <base href="/">
+  <!-- General META -->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- Semantic META -->
+  <meta name="keywords" content="startups, development, learning, mvp, challenge, resolutions">
+  <meta name="description" content="52 Startups. One Year.">
+
+  <!-- Facebook META -->
+  <meta property="fb:app_id" content="1219287611434270">
+  <meta property="og:site_name" content="AffiliateLink.Me">
+  <meta property="og:title" content="AffiliateLink.Me">
+  <meta property="og:description" content="52 Startups. One Year.">
+  <meta property="og:url" content="http://localhost:3000/">
+  <meta property="og:image" content="/img/brand/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter META -->
+  <meta name="twitter:title" content="AffiliateLink.Me">
+  <meta name="twitter:description" content="52 Startups. One Year.">
+  <meta name="twitter:url" content="http://localhost:3000/">
+  <meta name="twitter:image" content="/img/brand/logo.png">
+
+  <!-- Fav Icon -->
+  <link href="/modules/core/img/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/modules/core/img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/modules/core/img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/modules/core/img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/modules/core/img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/modules/core/img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/modules/core/img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/modules/core/img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/modules/core/img/faviconsapple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/modules/core/img/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/modules/core/img/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/modules/core/img/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/modules/core/img/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/modules/core/img/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/modules/core/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/modules/core/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/modules/core/img/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+  <!--Application CSS Files-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+  <link rel="stylesheet" href="modules/core/css/core.css"><link rel="stylesheet" href="modules/users/css/users.css">
+  <style>
+    .md-docs-dark-theme {
+    background-color: #424242;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+  .heroText {
+    font-size: 1.6em;
+  }
+  .heroTextTwo {
+    font-size: 1.6em;
+  }
+  .heroTextDescription {
+    font-size: 1.0em;
+  }
+}
+
+.homepageSplash {
+  background-image: url('/images/microphone.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.14), 0 0 2px 2px rgba(0, 0, 0, 0.098), 0 0 5px 1px rgba(0, 0, 0, 0.084);
+}
+
+.heroText {
+    font-size: 3.6em;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 200px;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 5px #555;
+}
+
+.heroTextTwo {
+    font-size: 1.8em;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+    text-shadow: 1px 1px #555;
+}
+
+md-docs-dark-theme a,a:hover,a:visited {
+  color: rgba(158,158,158,0.2);;
+}
+
+.md-button.splash {
+    text-transform: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 200px;
+}
+
+.menuBtn {
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…k9Im5vbmUiPgogICAgPGcgZGlzcGxheT0iaW5saW5lIj4KICAgIDwvZz4KPC9nPgo8L3N2Zz4=) no-repeat center center;
+    border: none;
+    height: 38px;
+    margin: 16px;
+    width: 36px;
+}
+
+  </style>
+
+</head>
+  <body class=""  ng-app="myApp">
+<md-toolbar class="md-default-theme md-fixed-toolbar ng-scope">
+  
+  <header class="md-toolbar-tools ng-scope"><button ng-click="toggleSidenav('left')" hide-gt-sm="" class="menuBtn hide-gt-sm ng-scope">
+  <span class="visually-hidden">Menu</span>
+</button>
+<a href="/" class="ng-scope">
+  <img src="images/250x30Logo.png">
+</a>
+<span flex="" class="ng-scope flex"></span>
+<div hide-xs="" hide-sm="" layout="row" class="hide-sm hide-xs ng-scope layout-row">
+<a class="md-button md-ink-ripple" ng-transclude="" href="http://www.startuppilots.com" aria-label="Training"><span class="ng-scope">StartupPilots</span></a>
+<a class="md-button md-ink-ripple" ng-transclude="" href="http://www.startuppilots.com/contact" aria-label="Contact"><span class="ng-scope">Contact</span></a>
+</div>
+</header>
+</md-toolbar>
+<div class="ng-scope">
+
+<md-sidenav class="md-sidenav-left md-whiteframe-z2 md-closed ng-scope ng-isolate-scope" md-component-id="left" tabindex="-1">
+  <md-toolbar class="md-theme-indigo">
+    <h1 class="md-toolbar-tools">Menu</h1>
+  </md-toolbar>
+  <md-content flex="" role="navigation" class="md-default-theme flex">
+    <ul class="docs-menu">
+      <li class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}">
+              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="/" ng-click="focusSection()" tabindex="0" href="/">
+                <span class="ng-binding ng-scope">
+              Home
+            </span>
+            <div class="md-ripple-container"></div>
+          </a>
+        </menu-link>
+        </li>
+      <li class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}">
+              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="/startups" ng-click="focusSection()" tabindex="0" href="/startups">
+                <span class="ng-binding ng-scope">
+              Startups
+            </span>
+            <div class="md-ripple-container"></div>
+          </a>
+        </menu-link>
+        </li>
+        <li class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}">
+              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="/ideas" ng-click="focusSection()" tabindex="0" href="/ideas">
+                <span class="ng-binding ng-scope">
+              Ideas
+            </span>
+            <div class="md-ripple-container"></div>
+          </a>
+        </menu-link>
+        </li>
+        <li class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}">
+              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="/training" ng-click="focusSection()" tabindex="0" href="/training">
+                <span class="ng-binding ng-scope">
+              Training
+            </span>
+            <div class="md-ripple-container"></div>
+          </a>
+        </menu-link>
+        </li>
+        <li class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}">
+              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="/contact" ng-click="focusSection()" tabindex="0" href="/contact">
+                <span class="ng-binding ng-scope">
+              Contact
+            </span>
+            <div class="md-ripple-container"></div>
+          </a>
+        </menu-link>
+        </li>
+        <li data-ng-show="authentication.user" class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}" aria-hidden="false">
+              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="#!/contact" href="#!/contact" tabindex="0">
+                <span class="ng-binding ng-scope">
+              Profile Settings
+            </span>
+            <div class="md-ripple-container"></div>
+          </a>
+        </menu-link>
+        </li>
+        <li data-ng-show="authentication.user" class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}" aria-hidden="false">
+              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="#!/contact" href="#!/contact" tabindex="0">
+                <span class="ng-binding ng-scope">
+              Sign Out
+            </span>
+            <div class="md-ripple-container"></div>
+          </a>
+        </menu-link>
+        </li>
+        <li data-ng-show="!authentication.user" class="parent-list-item ng-scope ng-hide" ng-class="{'parentActive' : isSectionSelected(section)}" aria-hidden="true">
+              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="#!/contact" href="#!/contact" tabindex="0">
+                <span class="ng-binding ng-scope">
+              Sign In
+            </span>
+            <div class="md-ripple-container"></div>
+          </a>
+        </menu-link>
+        </li>
+    </ul>
+    </md-content>
+</md-sidenav></div>
+<section class="ng-scope">
+  <md-content class="md-default-theme out-container">
+  
+  <!-- uiView:  --><section data-ui-view="" class="ng-scope">
+  <section  class="ng-scope">
+  <div class="homepageSplash md-default-theme layout-column" layout="column">
+    <div flex="35" class="flex-35"></div>
+    <div flex="33" class="flex-33">
+      <center>
+      <!--
+        <div class="heroText">
+          I'm building a new startup. <br>Every two weeks.
+        </div>
+        <div class="heroTextTwo">
+          Submit your ideas & vote on others!
+        </div>
+        -->
+        <div class="heroText">
+          Automatically add affiliate codes to links.
+        </div>
+        <div class="heroTextTwo">
+          No more missed revenue for your site.
+        </div>
+        <br>
+        <a class="md-raised md-primary splash md-button md-ink-ripple" ng-transclude="" href="/startups" aria-label="View Startups"><span class="ng-scope">
+          Coming Soon
+        </span></a>
+        <!-- <md-button class="md-raised splash" href="/submit">
+          Submit Your Idea </md-button> -->
+      </center>
+    </div>
+  </div>
+</section>
+<section class="md-padding md-docs-dark-theme ng-scope">
+  Copyright 2016 <a href="http://www.startuppilots.com">StartupPilots</a>. All rights reserved.
+</section></section>
+
+  </md-content>
+</section>
+
+<!--Application JavaScript Files-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-aria.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
+  <script>
+    angular.module('myApp', ['ngMaterial']);
+  </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73700457-1', 'auto');
+  ga('send', 'pageview');
+</script>
