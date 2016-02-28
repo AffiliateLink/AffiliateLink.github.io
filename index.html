@@ -167,9 +167,8 @@ md-content.subscribeNewsletter {
   </style>
 
 </head>
-  <body class=""  ng-app="myApp">
+<body class=""  ng-app="myApp" ng-controller="HomeController">
 <md-toolbar class="md-default-theme md-fixed-toolbar ng-scope">
-  
   <header class="md-toolbar-tools ng-scope"><button ng-click="toggleSidenav('left')" hide-gt-sm="" class="menuBtn hide-gt-sm ng-scope">
   <span class="visually-hidden">Menu</span>
 </button>
@@ -201,63 +200,18 @@ md-content.subscribeNewsletter {
         </menu-link>
         </li>
       <li class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}">
-              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="/startups" ng-click="focusSection()" tabindex="0" href="/startups">
+              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="http://www.startuppilots.com" ng-click="focusSection()" tabindex="0" href="http://www.startuppilots.com">
                 <span class="ng-binding ng-scope">
-              Startups
+              StartupPilots
             </span>
             <div class="md-ripple-container"></div>
           </a>
         </menu-link>
         </li>
         <li class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}">
-              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="/ideas" ng-click="focusSection()" tabindex="0" href="/ideas">
-                <span class="ng-binding ng-scope">
-              Ideas
-            </span>
-            <div class="md-ripple-container"></div>
-          </a>
-        </menu-link>
-        </li>
-        <li class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}">
-              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="/training" ng-click="focusSection()" tabindex="0" href="/training">
-                <span class="ng-binding ng-scope">
-              Training
-            </span>
-            <div class="md-ripple-container"></div>
-          </a>
-        </menu-link>
-        </li>
-        <li class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}">
-              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="/contact" ng-click="focusSection()" tabindex="0" href="/contact">
+              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="http://www.startuppilots.com/contact" ng-click="focusSection()" tabindex="0" href="http://www.startuppilots.com/contact">
                 <span class="ng-binding ng-scope">
               Contact
-            </span>
-            <div class="md-ripple-container"></div>
-          </a>
-        </menu-link>
-        </li>
-        <li data-ng-show="authentication.user" class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}" aria-hidden="false">
-              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="#!/contact" href="#!/contact" tabindex="0">
-                <span class="ng-binding ng-scope">
-              Profile Settings
-            </span>
-            <div class="md-ripple-container"></div>
-          </a>
-        </menu-link>
-        </li>
-        <li data-ng-show="authentication.user" class="parent-list-item ng-scope" ng-class="{'parentActive' : isSectionSelected(section)}" aria-hidden="false">
-              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="#!/contact" href="#!/contact" tabindex="0">
-                <span class="ng-binding ng-scope">
-              Sign Out
-            </span>
-            <div class="md-ripple-container"></div>
-          </a>
-        </menu-link>
-        </li>
-        <li data-ng-show="!authentication.user" class="parent-list-item ng-scope ng-hide" ng-class="{'parentActive' : isSectionSelected(section)}" aria-hidden="true">
-              <menu-link section="section" class="ng-scope ng-isolate-scope"><a class="md-button md-default-theme active" ng-class="{'active' : isSelected()}" ng-href="#!/contact" href="#!/contact" tabindex="0">
-                <span class="ng-binding ng-scope">
-              Sign In
             </span>
             <div class="md-ripple-container"></div>
           </a>
@@ -361,6 +315,36 @@ md-content.subscribeNewsletter {
 
   }
   ]);
+
+
+    angular.module('myApp').controller('HomeController', ['$scope', '$rootScope', '$mdSidenav',
+  function ($scope, $rootScope, $mdSidenav) {
+
+
+    // Toggle the menu items
+    $scope.isCollapsed = false;
+    $scope.toggleCollapsibleMenu = function () {
+      $scope.isCollapsed = !$scope.isCollapsed;
+    };
+
+    // Collapsing the menu after navigation
+    $scope.$on('$stateChangeSuccess', function () {
+      $scope.isCollapsed = false;
+    });
+
+    $scope.openMenu = function($mdOpenMenu, ev) {
+      $mdOpenMenu(ev);
+    };
+
+    $rootScope.showNav = true;
+
+    $scope.toggleSidenav = function() {
+      //$rootScope.showNav = !$rootScope.showNav;
+      var nav = $mdSidenav('left');
+      nav.toggle();
+    };
+  }
+]);
 
   </script>
 <script>
